@@ -1,7 +1,3 @@
-//
-//  String+Substring.swift
-//
-
 import XCTest
 @testable import Transit
 
@@ -72,7 +68,7 @@ final class Substring_nextField_Tests: XCTestCase {
 // MARK: - String readRecord() tests
 
 final class String_readRecord_Tests: XCTestCase {
-    
+
   func test_simpleRecord() {
     let record = "one,2,three"
     XCTAssertEqual(try? record.readRecord(), ["one", "2", "three"])
@@ -84,18 +80,18 @@ final class String_readRecord_Tests: XCTestCase {
   }
   
   func test_recordWithEmptyField() {
-      let record = "one,2,,three"
-      XCTAssertEqual(try? record.readRecord(), ["one", "2", "", "three"])
+    let record = "one,2,,three"
+    XCTAssertEqual(try? record.readRecord(), ["one", "2", "", "three"])
   }
   
   func test_recordWithQuotedField() {
-      let record = "one,\"2\",three"
-      XCTAssertEqual(try? record.readRecord(), ["one", "2", "three"])
+    let record = "one,\"2\",three"
+    XCTAssertEqual(try? record.readRecord(), ["one", "2", "three"])
   }
   
   func test_recordWithFieldContainingCommas() {
-      let record = "one,\"tw,o\",three"
-      XCTAssertEqual(try? record.readRecord(), ["one", "tw,o", "three"])
+    let record = "one,\"tw,o\",three"
+    XCTAssertEqual(try? record.readRecord(), ["one", "tw,o", "three"])
   }
   
   //
@@ -152,17 +148,17 @@ final class StringReadHeaderTests: XCTestCase {
     }
   }
 }
-  
+
 // MARK: - String splitRecords() tests
 final class StringSplitRecordsTests: XCTestCase {
 
   func test_basicLines() {
-      let records = "one,2,,three\nfour,five"
+    let records = "one,2,,three\nfour,five"
     XCTAssertEqual(records.splitRecords(), ["one,2,,three", "four,five"])
   }
   
   func test_linesWithCRLF() {
-      let records = "one,2,,three\r\nfour,five"
+    let records = "one,2,,three\r\nfour,five"
     XCTAssertEqual(records.splitRecords(), ["one,2,,three", "four,five"])
   }
   
@@ -243,7 +239,7 @@ final class Blah: XCTestCase {
 
 // MARK: - String StringAndSubstringTests() tests
 final class StringAndSubstringTests: XCTestCase {
-    
+
   func test_fieldsFromAgencyWithCTAFeed() {
     let fields: [AgencyField]? = try!
       """

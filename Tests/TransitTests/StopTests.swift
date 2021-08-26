@@ -1,7 +1,3 @@
-//
-//  StopTests.swift
-//
-
 import XCTest
 @testable import Transit
 

@@ -1,12 +1,3 @@
-//
-//  String+Substring.swift
-//
-
-/**
-  - TODO: Write "writeRecord".
-  - TODO: Write "writeHeader".
-*/
-
 import Foundation
 import CoreGraphics
 import CoreLocation
@@ -50,12 +41,12 @@ extension Substring {
     default:
       if let nextComma = firstIndex(of: ",") {
         let field = prefix(upTo: nextComma)
-          self = self[index(after: nextComma)...]
-          return String(field)
+        self = self[index(after: nextComma)...]
+        return String(field)
       } else {
-          let field = self
-          removeAll()
-          return String(field)
+        let field = self
+        removeAll()
+        return String(field)
       }
     }
   }
@@ -115,7 +106,7 @@ extension String {
       return headerField
     }
   }
-    
+
   /**
    Return all GTFS records contained within `self`.
    
@@ -211,7 +202,7 @@ extension String {
   }
   
   func assignUIntTo<InstanceType, FieldType>(_ instance: inout InstanceType,
-                                               for field: FieldType)
+                                             for field: FieldType)
   throws where FieldType: KeyPathVending {
     guard let path = field.path as? WritableKeyPath<InstanceType, UInt> else {
       throw TransitAssignError.invalidPath
@@ -290,7 +281,7 @@ extension String {
    - Tag: String-assignOptionalTimeZoneTo
    */
   func assignOptionalTimeZoneTo<InstanceType, FieldType>(_ instance: inout InstanceType,
-                                                 for field: FieldType)
+                                                         for field: FieldType)
   throws where FieldType: KeyPathVending {
     guard let path = field.path as? WritableKeyPath<InstanceType, TimeZone?> else {
       throw TransitAssignError.invalidPath

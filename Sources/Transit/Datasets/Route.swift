@@ -1,7 +1,3 @@
-//
-//  Route.swift
-//
-
 import Foundation
 import CoreGraphics
 
@@ -104,17 +100,17 @@ public struct Route: Identifiable {
        .pickupPolicy, .dropoffPolicy]
   
   public init(routeID: TransitID = "Unidentified route",
-       agencyID: TransitID? = nil,
-       name: String? = nil,
-       shortName: String? = nil,
-       details: String? = nil,
-       type: RouteType = .bus,
-       url: URL? = nil,
-       color: CGColor? = nil,
-       textColor: CGColor? = nil,
-       sortOrder: UInt? = nil,
-       pickupPolicy: PickupDropffPolicy? = nil,
-       dropoffPolicy: PickupDropffPolicy? = nil) {
+              agencyID: TransitID? = nil,
+              name: String? = nil,
+              shortName: String? = nil,
+              details: String? = nil,
+              type: RouteType = .bus,
+              url: URL? = nil,
+              color: CGColor? = nil,
+              textColor: CGColor? = nil,
+              sortOrder: UInt? = nil,
+              pickupPolicy: PickupDropffPolicy? = nil,
+              dropoffPolicy: PickupDropffPolicy? = nil) {
     self.routeID = routeID
     self.agencyID = agencyID
     self.name = name
@@ -211,7 +207,7 @@ public struct Routes: Identifiable {
   public var headerFields = [RouteField]()
   fileprivate var routes = [Route]()
   
-  subscript(index: Int) -> Route {
+  public subscript(index: Int) -> Route {
     get {
       return routes[index]
     }

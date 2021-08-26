@@ -42,11 +42,11 @@ final class AgencyTests: XCTestCase {
   
   func test_initWithSomeArguments() {
     let agency = Agency(name: "Chicago Transit Authority",
-      url: URL(string: "http://transitchicago.com")!,
-      timeZone: TimeZone(identifier: "America/Chicago")!,
-      locale: Locale(identifier: "en"),
-      phone: "1-888-YOURCTA",
-      fareURL: URL(string: "http://www.transitchicago.com/fares")!)
+                        url: URL(string: "http://transitchicago.com")!,
+                        timeZone: TimeZone(identifier: "America/Chicago")!,
+                        locale: Locale(identifier: "en"),
+                        phone: "1-888-YOURCTA",
+                        fareURL: URL(string: "http://www.transitchicago.com/fares")!)
     XCTAssertNil(agency.agencyID)
     XCTAssertEqual(agency.name, "Chicago Transit Authority")
     XCTAssertEqual(agency.url, URL(string: "http://transitchicago.com")!)
@@ -60,25 +60,25 @@ final class AgencyTests: XCTestCase {
   //  Need to finish ...
   func test_initWithAllArguments() {
     let agency = Agency(agencyID: "Chicago Transit Authority",
-      name: "Chicago Transit Authority",
-      url: URL(string: "http://transitchicago.com")!,
-      timeZone: TimeZone(identifier: "America/Chicago")!,
-      locale: Locale(identifier: "en"),
-      phone: "1-888-YOURCTA",
-      fareURL: URL(string: "http://www.transitchicago.com/fares")!,
-      email: "cat@transitchicago.com")
+                        name: "Chicago Transit Authority",
+                        url: URL(string: "http://transitchicago.com")!,
+                        timeZone: TimeZone(identifier: "America/Chicago")!,
+                        locale: Locale(identifier: "en"),
+                        phone: "1-888-YOURCTA",
+                        fareURL: URL(string: "http://www.transitchicago.com/fares")!,
+                        email: "cat@transitchicago.com")
     XCTAssertEqual(agency.agencyID, "Chicago Transit Authority")
     XCTAssertEqual(agency.name, "Chicago Transit Authority")
   }
   
   //  Should return nil
   /*
-  func test_initFromRecordWithNoHeaders() {
-    let headers: [AgencyField] = []
-    let record = ""
-    let agency = try? Agency(from: record, using: headers)
-    XCTAssertNil(agency)
-  }*/
+   func test_initFromRecordWithNoHeaders() {
+   let headers: [AgencyField] = []
+   let record = ""
+   let agency = try? Agency(from: record, using: headers)
+   XCTAssertNil(agency)
+   }*/
   
   func test_initFromRecordWithSomeHeaders() {
     let headers: [AgencyField] = [
@@ -114,8 +114,8 @@ final class AgencyTests: XCTestCase {
   
   func test_customStringConvertible() {
     let agency = Agency(name: "Chicago Transit Authority",
-      url: URL(string: "http://transitchicago.com")!,
-      timeZone: TimeZone(identifier: "America/Chicago")!)
+                        url: URL(string: "http://transitchicago.com")!,
+                        timeZone: TimeZone(identifier: "America/Chicago")!)
     XCTAssertEqual(agency.description, "Agency: Chicago Transit Authority")
   }
 }

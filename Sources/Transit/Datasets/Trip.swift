@@ -1,7 +1,3 @@
-//
-//  Trip.swift
-//
-
 import Foundation
 
 // MARK: TripField
@@ -66,11 +62,11 @@ public struct Trip: Identifiable {
     [TripField.routeID, TripField.serviceID, TripField.tripID]
   
   public init(routeID: TransitID = "",
-       serviceID: TransitID = "",
-       tripID: TransitID = "",
-       headsign: String? = nil,
-       shortName: String? = nil,
-       shapeID: String? = nil) {
+              serviceID: TransitID = "",
+              tripID: TransitID = "",
+              headsign: String? = nil,
+              shortName: String? = nil,
+              shapeID: String? = nil) {
     self.routeID = routeID
     self.serviceID = serviceID
     self.tripID = tripID

@@ -1,7 +1,3 @@
-//
-//  RouteTests.swift
-//
-
 import XCTest
 @testable import Transit
 

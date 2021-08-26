@@ -1,7 +1,3 @@
-//
-//  Stop.swift
-//
-
 import Foundation
 import CoreLocation
 
@@ -96,19 +92,19 @@ public struct Stop: Identifiable {
   public var platformCode: String?
   
   public init(stopID: TransitID = "Unidentified stop",
-       code: StopCode? = nil,
-       name: String? = nil,
-       details: String? = nil,
-       latitude: CLLocationDegrees? = nil,
-       longitude: CLLocationDegrees? = nil,
-       zoneID: TransitID? = nil,
-       url: URL? = nil,
-       locationType: StopLocationType? = nil,
-       parentStationID: TransitID? = nil,
-       timeZone: TimeZone? = nil,
-       accessibilty: Accessibility? = nil,
-       levelID: TransitID? = nil,
-       platformCode: String?) {
+              code: StopCode? = nil,
+              name: String? = nil,
+              details: String? = nil,
+              latitude: CLLocationDegrees? = nil,
+              longitude: CLLocationDegrees? = nil,
+              zoneID: TransitID? = nil,
+              url: URL? = nil,
+              locationType: StopLocationType? = nil,
+              parentStationID: TransitID? = nil,
+              timeZone: TimeZone? = nil,
+              accessibilty: Accessibility? = nil,
+              levelID: TransitID? = nil,
+              platformCode: String?) {
     self.stopID = stopID
     self.code = code
     self.name = name

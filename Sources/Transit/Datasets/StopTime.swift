@@ -1,7 +1,3 @@
-//
-//  StopTime.swift
-//
-
 import Foundation
 
 // MARK: StopTimeField
@@ -68,17 +64,17 @@ public struct StopTime: Identifiable {
   public var timepointType: Int?
   
   public init(tripID: TransitID = "",
-       arrival: Date? = nil,
-       departure: Date? = nil,
-       stopID: TransitID = "",
-       stopSequenceNumber: UInt = 0,
-       stopHeadingSign: String? = nil,
-       pickupType: Int? = nil,
-       dropoffType: Int? = nil,
-       continuousPickup: Int? = nil,
-       continuousDropoff: Int? = nil,
-       distanceTraveledForShape: Double? = nil,
-       timepointType: Int? = nil) {
+              arrival: Date? = nil,
+              departure: Date? = nil,
+              stopID: TransitID = "",
+              stopSequenceNumber: UInt = 0,
+              stopHeadingSign: String? = nil,
+              pickupType: Int? = nil,
+              dropoffType: Int? = nil,
+              continuousPickup: Int? = nil,
+              continuousDropoff: Int? = nil,
+              distanceTraveledForShape: Double? = nil,
+              timepointType: Int? = nil) {
     self.tripID = tripID
     self.arrival = arrival
     self.departure = departure
@@ -142,7 +138,7 @@ public struct StopTimes: Identifiable {
   public var headerFields = [StopTimeField]()
   fileprivate var stopTimes = [StopTime]()
   
-  subscript(index: Int) -> StopTime {
+  public subscript(index: Int) -> StopTime {
     get {
       return stopTimes[index]
     }

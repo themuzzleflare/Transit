@@ -1,7 +1,3 @@
-//
-//  Agency.swift
-//
-
 import Foundation
 
 // MARK: AgencyField
@@ -78,13 +74,13 @@ public struct Agency: Identifiable {
   
   ///  Basic init.
   public init(agencyID: String? = nil,
-       name: String = "",
-       url: URL = URL(string: "https://unnamed.com")!,
-       timeZone: TimeZone = TimeZone(identifier: "UTC")!,
-       locale: Locale? = nil,
-       phone: String? = nil,
-       fareURL: URL? = nil,
-       email: String? = nil) {
+              name: String = "",
+              url: URL = URL(string: "https://unnamed.com")!,
+              timeZone: TimeZone = TimeZone(identifier: "UTC")!,
+              locale: Locale? = nil,
+              phone: String? = nil,
+              fareURL: URL? = nil,
+              email: String? = nil) {
     self.agencyID = agencyID
     self.name = name
     self.url = url
@@ -146,10 +142,6 @@ extension Agency: CustomStringConvertible {
 }
 
 // MARK: - Agencies
-
-// TODO: Method to test for required and conditionally required fields.
-// TODO: Method to ensure that feed with mutiple agencies does not omit agencyIDs.
-// TODO: Method to ensure that all contained agencies have the same timezone.
 
 ///  A representation of a complete Agency dataset.
 public struct Agencies: Identifiable {

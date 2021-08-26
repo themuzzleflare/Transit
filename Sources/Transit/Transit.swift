@@ -1,7 +1,3 @@
-//
-//  Transit.swift
-//
-
 import Foundation
 
 /// - Tag: TransitID
@@ -26,20 +22,20 @@ public enum TransitError: Error {
 extension TransitError: LocalizedError {
   public var errorDescription: String? {
     switch self {
-      case .emptySubstring:
-        return "Substring is empty"
-      case .commaExpected:
-        return "A comma was expected, but not found"
-      case .quoteExpected:
-        return "A quote was expected, but not found"
-      case .invalidFieldType:
-        return "An invalid field type was found"
-      case .missingRequiredFields:
-        return "One or more required fields is missing"
-      case .headerRecordMismatch:
-        return "The number of header and data fields are not the same"
-      case .invalidColor:
-        return "An invalid color was found"
+    case .emptySubstring:
+      return "Substring is empty"
+    case .commaExpected:
+      return "A comma was expected, but not found"
+    case .quoteExpected:
+      return "A quote was expected, but not found"
+    case .invalidFieldType:
+      return "An invalid field type was found"
+    case .missingRequiredFields:
+      return "One or more required fields is missing"
+    case .headerRecordMismatch:
+      return "The number of header and data fields are not the same"
+    case .invalidColor:
+      return "An invalid color was found"
     }
   }
 }
@@ -53,10 +49,10 @@ public enum TransitAssignError: Error {
 extension TransitAssignError: LocalizedError {
   public var errorDescription: String? {
     switch self {
-      case .invalidPath:
-        return "Path is invalid"
-      case .invalidValue:
-        return "Could not value convert to target type"
+    case .invalidPath:
+      return "Path is invalid"
+    case .invalidValue:
+      return "Could not value convert to target type"
     }
   }
 }
